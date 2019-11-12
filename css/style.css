@@ -135,7 +135,10 @@ nav .brand-logo.left {
     width: 100%;
     height: 85px;
     margin: 1.68em auto;
-    background-color: var(--main-bg-col);
+    background-image: url('/img/mapa.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .contact__content_wrapper {
     display: flex;
@@ -197,6 +200,9 @@ nav .brand-logo.left {
     background-color: var(--secondary-bg-col);
     display: none;
 }
+.tabs .tab {
+    height: 35px;
+}
 .col.s12.tabs__content {
     background-color: var(--main-el-bg-col);
     color: var(--secondary-txt-col);
@@ -213,6 +219,21 @@ img.responsive-img.drimg {
     text-transform: uppercase;
     margin-bottom: 1em;
 }
+.team__section .collapsible-header {
+    color: var(--secondary-txt-col);
+    background-color: var(--main-el-bg-col);
+}
+.collapsible-body__img {
+    background-image: url("/img/doc1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    margin: 2em 0;
+}
+.collapsible-body p {
+    margin: .5em;
+}
 
 
 /* OFFER SECTION  */
@@ -225,8 +246,9 @@ img.responsive-img.drimg {
 .offer__box {
     /* width: 100%; */
     height: 120px;
-    border: 1px solid black;
-    background-color: rgb(100, 100, 100);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .offer__box h5 {
     position: relative;
@@ -236,6 +258,24 @@ img.responsive-img.drimg {
     text-align: center;
     color: var(--secondary-txt-col);
     font-weight: 600;
+}
+.offer__box:nth-of-type(1) {
+    background-image: url('/img/oferta_galeria/box1.jpg');
+}
+.offer__box:nth-of-type(2) {
+    background-image: url('/img/oferta_galeria/box2.jpg');
+}
+.offer__box:nth-of-type(3) {
+    background-image: url('/img/oferta_galeria/box3.jpg');
+}
+.offer__box:nth-of-type(4) {
+    background-image: url('/img/oferta_galeria/box4.png');
+}
+.offer__box:nth-of-type(5) {
+    background-image: url('/img/oferta_galeria/box5.jpg');
+}
+.offer__box:nth-of-type(6) {
+    background-image: url('/img/oferta_galeria/box6.jpg');
 }
 
 /* PATIENTS SECTION  */
@@ -250,7 +290,7 @@ img.responsive-img.drimg {
 .collapsible {
     margin: 0 auto;
 }
-.collapsible-header {
+.patients__section .collapsible-header {
     color: var(--secondary-txt-col);
     background-color: var(--main-el-bg-col);
 }
@@ -293,21 +333,13 @@ img.responsive-img.drimg {
 }
 
 /* FOOTER  */
+footer {
+    text-align: center;
+}
 .footer__info {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1.68em auto;
-}
-.footer__logo {
-    background-image: url('/img/logo.jpg');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100px;
-    height: 100px;
+    justify-content: space-evenly;
 }
 .footer__contact {
     display: flex;
@@ -315,11 +347,17 @@ img.responsive-img.drimg {
     margin: 1.68em auto;
 }
 .footer__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 100px;
+    height: 80px;
 }
 .footer__box:nth-of-type(odd) {
     background-color: #F5F5F5;
+}
+.footer__box p {
+    font-size: 14px;
 }
 .bold {
     font-weight: bolder;
