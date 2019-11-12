@@ -1,0 +1,325 @@
+:root {
+    --headers-font-family: 'Raleway', sans-serif;
+    --main-txt-col: #333;
+    --secondary-txt-col: #F5F5F5;
+    --main-bg-col: #F9F9F9;
+    --secondary-bg-col: #184561;
+    --main-el-bg-col: #70A8CC;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+html {
+    background-color: var(--main-bg-col);
+}
+
+/* REUSABLE ELEMENTS STYLES */
+h1 {
+    font-family: var(--headers-font-family);
+    font-size: 22px;
+    text-transform: uppercase;
+}
+h4 {
+    font-family: var(--headers-font-family);
+    font-size: 18px;
+}
+h5 {
+    font-family: var(--headers-font-family);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+button {
+    font-size: 10px;
+    font-family: inherit;
+    width: 150px;
+    height: 32px;
+    margin: 1em auto;
+    border-radius: 15px;
+    border: none;
+}
+.section__anchor {
+    padding-top: 60px;
+    margin-top: -60px;
+}
+
+/* NAVBAR  */
+.brand-logo {
+    background-image: url('/img/logo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+nav .sidenav-trigger {
+    color: var(--main-txt-col);
+}
+nav ul a {
+    color: var(--main-txt-col);
+}
+
+/* SIDENAV  */
+nav .nav-wrapper {
+    overflow: hidden;
+}
+.nav__title {
+    margin: 0 auto;
+    font-family: var(--headers-font-family);
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sidenav {
+    padding: 2em 0;
+    text-align: center;
+}
+.sidenav__logo {
+background-image: url("/img/logo.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+width: 100px;
+height: 100px;
+margin: 1em auto;
+}
+nav .brand-logo.left {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* HERO SECTION */
+.hero__section {
+    position: relative;
+}
+.hero__img {
+    /* background-image: url('/img/hero_img.jpg'); */
+    background-image: url('/img/min-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 530px;
+}
+.hero__content__wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+.hero__content {
+    font-weight: 700;
+    color: var(--secondary-txt-col);
+}
+.hero__btn {
+    background-color: var(--main-el-bg-col);
+    color: var(--secondary-txt-col);
+}
+
+/* CONTACT SECTION */
+.contact__section {
+    background-color: var(--secondary-bg-col);
+    color: var(--secondary-txt-col);
+}
+.map {
+    width: 100%;
+    height: 85px;
+    margin: 1.68em auto;
+    background-color: var(--main-bg-col);
+}
+.contact__content_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1.5em;
+}
+.contact__content_wrapper div {
+   flex-grow: 1; 
+}
+.contact__hours {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+}
+.contact__content_wrapper li {
+    font-size: 12px;
+}
+
+/* ABOUT SECTION */
+.section__img {
+    background-image: url('/img/doctors.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+.about__bg {
+    background-color: #EFEFEF;
+    padding: 1.68em 0;
+}
+
+/* TEAM SECTION  */
+.tabs {
+    background-color: var(--main-bg-col);
+    flex-wrap: wrap;
+    margin-bottom: 1.68em;
+    /* height: 300px; */
+    height: auto;
+}
+.tab {
+    cursor: pointer;
+}
+.tab:nth-of-type(n+4) {
+    border-top: 1px solid #EFEFEF;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: transparent;
+    color: none;
+}
+.tabs .indicator {
+    background-color: var(--secondary-bg-col);
+    display: none;
+}
+.col.s12.tabs__content {
+    background-color: var(--main-el-bg-col);
+    color: var(--secondary-txt-col);
+    padding: 1em;
+    margin-bottom: 1em;
+}
+img.responsive-img.drimg {
+    height: 300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.flow-text.flow-text {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+/* OFFER SECTION  */
+.offer__wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-gap: .5em;
+    margin-bottom: 30px;
+}
+.offer__box {
+    /* width: 100%; */
+    height: 120px;
+    border: 1px solid black;
+    background-color: rgb(100, 100, 100);
+}
+.offer__box h5 {
+    position: relative;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: var(--secondary-txt-col);
+    font-weight: 600;
+}
+
+/* PATIENTS SECTION  */
+.section__content {
+    margin-top: 1.68em;
+}
+.patients__bg {
+    background-color: #EFEFEF;
+    padding: 1.68em 0;
+    margin: 1.68em 0;
+}
+.collapsible {
+    margin: 0 auto;
+}
+.collapsible-header {
+    color: var(--secondary-txt-col);
+    background-color: var(--main-el-bg-col);
+}
+.collapsible {
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+/* FAQ SECTION  */
+.faq__section {
+    background-color: var(--secondary-bg-col);
+    color: var(--secondary-txt-col);
+    margin: 3.68em auto 1.68em auto ;
+}
+.faq__section h1 {
+    text-transform: none;
+}
+.faq__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.faq__box {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+}
+.faq__box h5 {
+    text-transform: none;
+}
+.faq__box p {
+    margin: 1em auto 2em auto;
+}
+.faq__box:not(:last-of-type)::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #707070;
+    margin-bottom: 2em;
+}
+
+/* FOOTER  */
+.footer__info {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.68em auto;
+}
+.footer__logo {
+    background-image: url('/img/logo.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    margin: 1.68em auto;
+}
+.footer__box {
+    width: 100%;
+    height: 100px;
+}
+.footer__box:nth-of-type(odd) {
+    background-color: #F5F5F5;
+}
+.bold {
+    font-weight: bolder;
+}
