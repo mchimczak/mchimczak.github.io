@@ -88,6 +88,13 @@ section .collapsible {
     border: none;
     box-shadow: 0px 0px 0px 0 rgba(0,0,0,0.14), 0px 6px 9px 0px rgba(0,0,0,0.12), 0px 2px 7px 0px rgba(0,0,0,0.2);
 }
+a {
+    text-decoration: none;
+    color: var(--secondary-txt-col);
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
 
 /* SIDENAV  */
 nav .nav-wrapper {
@@ -168,8 +175,12 @@ nav .brand-logo.left {
     background-color: var(--secondary-bg-col);
     color: var(--secondary-txt-col);
     border-radius: 45px 0 45px 0;
+    padding: 20px 0;
     position: relative;
     top: -100px;
+}
+section.contact__section {
+    margin-bottom: -100px;
 }
 .map {
     width: 100%;
@@ -182,26 +193,18 @@ nav .brand-logo.left {
 }
 .contact__content_wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 1.5em;
+    flex-direction: column;
 }
 .contact__content_wrapper div {
-   flex-grow: 1; 
+   margin-bottom: 2em;
 }
 .contact__hours {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-right: 1.5em;
 }
 .contact__info {
     display: flex;
     flex-direction: column;
-    text-align: left;
-}
-.contact__content_wrapper li {
-    font-size: 12px;
 }
 
 /* ABOUT SECTION */
@@ -214,8 +217,9 @@ nav .brand-logo.left {
     height: 200px;
 }
 .about__bg {
-    background-color: #EFEFEF;
+    background-color: #e6e6e6;
     padding: 66px 0;
+    border-radius: 0 0 100px 0;
 }
 
 /* TEAM SECTION  */
@@ -259,15 +263,14 @@ img.responsive-img.drimg {
     text-transform: uppercase;
     margin-bottom: 1em;
 }
-.team__section li:first-of-type {
-    /* margin-bottom: 2px; */
+/* .team__section li:first-of-type {
     border-radius: 25px 0 0 0;
 }
 .team__section li:last-of-type {
-    /* margin-bottom: 2px; */
     border-radius: 0 0 25px 0;
-}
+} */
 .team__section .collapsible {
+    border-radius: 15px 6px 15px 6px;
     box-shadow: none;
     border: none;
 }
@@ -306,6 +309,7 @@ img.responsive-img.drimg {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 6px;
 }
 .offer__box h5 {
     position: relative;
@@ -336,23 +340,34 @@ img.responsive-img.drimg {
 }
 
 /* PATIENTS SECTION  */
+section.patients__section {
+    background-color: #e6e6e6;
+    padding: 66px 0;
+    border-radius: 0 100px 0 0;
+    position: relative;
+}
 .section__content {
     margin-top: 1.68em;
 }
 .patients__bg {
-    background-color: #EFEFEF;
     padding: 1.68em 0;
     margin: 1.68em 0;
 }
 .collapsible {
     margin: 0 auto;
 }
-.patients__section ul li:first-of-type {
-    border-radius: 6px 6px 0 0;
+.patients__section .collapsible {
+    border-radius: 15px 6px 15px 6px;
+}
+.patients__section .collapsible-body {
+    background-color: var(--main-bg-col);
+}
+/* .patients__section ul li:first-of-type {
+    border-radius: 15px 6px 0 0;
 }
 .patients__section ul li:last-of-type {
-    border-radius: 0 0 6px 6px;
-}
+    border-radius: 0 0 15px 6px;
+} */
 /* .patients__section ul:nth-of-type(2) li:first-of-type {
     border-radius: 0 25px 0 0;
 } */
@@ -387,6 +402,7 @@ img.responsive-img.drimg {
     border-radius: 6px;
     padding: 10%;
     margin-bottom: 30px;
+    box-shadow: 0px 0px 0px 0 rgba(0,0,0,0.14), 0px 3px 9px 0px rgba(0,0,0,0.12), 0px 2px 7px 0px rgba(0,0,0,0.2);
 }
 .faq__box h5 {
     text-transform: none;
