@@ -5,6 +5,7 @@
     --main-bg-col: #F9F9F9;
     --secondary-bg-col: #184561;
     --main-el-bg-col: #70A8CC;
+    --secondary-el-bg-col: #32BB8F;
 }
 
 *, *::before, *::after {
@@ -24,6 +25,7 @@ html {
 h1 {
     font-family: var(--headers-font-family);
     font-size: 22px;
+    margin: 3em 0;
     text-transform: uppercase;
 }
 h4 {
@@ -46,14 +48,22 @@ button {
     border: none;
 }
 .section__anchor {
-    padding-top: 60px;
-    margin-top: -60px;
+    padding-top: 10px;
+    margin-top: -10px;
+}
+section:not(:first-of-type) {
+    margin-bottom: 2em;
 }
 
 /* NAVBAR  */
-.navbar-fixed {
-    position: fixed;
+nav {
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 0px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    /* position: fixed; */
 }
+/* .navbar-fixed {
+    position: fixed;
+} */
 .brand-logo {
     background-image: url('/img/logo.jpg');
     background-position: center;
@@ -69,6 +79,11 @@ nav .sidenav-trigger {
 }
 nav ul a {
     color: var(--main-txt-col);
+}
+section .collapsible {
+    /* box-shadow: none; */
+    border: none;
+    box-shadow: 0px 0px 0px 0 rgba(0,0,0,0.14), 0px 6px 9px 0px rgba(0,0,0,0.12), 0px 2px 7px 0px rgba(0,0,0,0.2);
 }
 
 /* SIDENAV  */
@@ -111,8 +126,21 @@ nav .brand-logo.left {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 530px;
+    height: 95vh;
+    /* height: 530px; */
+    /* border-radius: 0 0 20px 20px; */
 }
+/* .hero__img::after {
+    content:'';
+    width:100%;
+    height:40px;
+    border:1px solid red;
+    background: var(--main-bg-col);
+    position:absolute;
+    bottom:3px;
+    border-radius: 20px 20px 0 0;
+    z-index: 5;
+} */
 .hero__content__wrapper {
     position: absolute;
     top: 50%;
@@ -125,14 +153,20 @@ nav .brand-logo.left {
     color: var(--secondary-txt-col);
 }
 .hero__btn {
-    background-color: var(--main-el-bg-col);
+    background-color: var(--secondary-el-bg-col);
     color: var(--secondary-txt-col);
+    font-size: 13px;
+    width: 200px;
+    height: 40px;
 }
 
 /* CONTACT SECTION */
 .contact__section {
     background-color: var(--secondary-bg-col);
     color: var(--secondary-txt-col);
+    border-radius: 45px 0 45px 0;
+    position: relative;
+    top: -100px;
 }
 .map {
     width: 100%;
@@ -156,11 +190,11 @@ nav .brand-logo.left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-right: 1.5em;
 }
 .contact__info {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     text-align: left;
 }
 .contact__content_wrapper li {
@@ -178,7 +212,7 @@ nav .brand-logo.left {
 }
 .about__bg {
     background-color: #EFEFEF;
-    padding: 1.68em 0;
+    padding: 66px 0;
 }
 
 /* TEAM SECTION  */
@@ -222,9 +256,26 @@ img.responsive-img.drimg {
     text-transform: uppercase;
     margin-bottom: 1em;
 }
+.team__section li:first-of-type {
+    /* margin-bottom: 2px; */
+    border-radius: 25px 0 0 0;
+}
+.team__section li:last-of-type {
+    /* margin-bottom: 2px; */
+    border-radius: 0 0 25px 0;
+}
+.team__section .collapsible {
+    box-shadow: none;
+    border: none;
+}
 .team__section .collapsible-header {
     color: var(--secondary-txt-col);
-    background-color: var(--main-el-bg-col);
+    background-color: var(--secondary-el-bg-col);
+    border-bottom: 1px solid #28af84;
+}
+.team__section li.active .collapsible-header {
+    /* background-color: #349d7c; */
+    box-shadow: 0px 0px 0px 0 rgba(0,0,0,0.14), 0px 3px 9px 0px rgba(0,0,0,0.12), 0px 2px 7px 0px rgba(0,0,0,0.2);
 }
 .collapsible-body__img {
     background-image: url("/img/doc1.png");
@@ -293,18 +344,29 @@ img.responsive-img.drimg {
 .collapsible {
     margin: 0 auto;
 }
+.patients__section ul li:first-of-type {
+    border-radius: 6px 6px 0 0;
+}
+.patients__section ul li:last-of-type {
+    border-radius: 0 0 6px 6px;
+}
+/* .patients__section ul:nth-of-type(2) li:first-of-type {
+    border-radius: 0 25px 0 0;
+} */
 .patients__section .collapsible-header {
     color: var(--secondary-txt-col);
-    background-color: var(--main-el-bg-col);
+    background-color: #437898;
+    border-bottom: 1px solid #56839f;
 }
-.collapsible {
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.2);
+.patients__section li.active .collapsible-header {
+    background-color: #386480;
+    box-shadow: 0px 0px 0px 0 rgba(0,0,0,0.14), 0px 3px 9px 0px rgba(0,0,0,0.12), 0px 2px 7px 0px rgba(0,0,0,0.2);
 }
 
 /* FAQ SECTION  */
 .faq__section {
-    background-color: var(--secondary-bg-col);
-    color: var(--secondary-txt-col);
+    /* background-color: var(--secondary-bg-col); */
+    /* color: var(--secondary-txt-col); */
     margin: 3.68em auto 1.68em auto ;
 }
 .faq__section h1 {
@@ -317,22 +379,17 @@ img.responsive-img.drimg {
 .faq__box {
     width: 100%;
     height: auto;
-    /* border: 1px solid black; */
+    background-color: var(--secondary-bg-col);
+    color: var(--secondary-txt-col);
+    border-radius: 6px;
+    padding: 10%;
+    margin-bottom: 30px;
 }
 .faq__box h5 {
     text-transform: none;
 }
 .faq__box p {
     margin: 1em auto 2em auto;
-}
-.faq__box:not(:last-of-type)::after {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 60%;
-    margin: 0 auto;
-    background-color: #707070;
-    margin-bottom: 2em;
 }
 
 /* FOOTER  */
