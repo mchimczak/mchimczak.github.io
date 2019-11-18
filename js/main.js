@@ -20,3 +20,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
   });
+
+
+const section_img = document.querySelector('.section__img')
+
+if (window.innerWidth >= 768) {
+    section_img.classList.add('container');
+}
+
+const offer__boxes = document.querySelectorAll('.offer__wrapper > li');
+const offer_boxes_body = document.querySelectorAll(".offer__wrapper .collapsible-body")
+
+if (window.innerWidth >= 768 && window.innerWidth <=1200) {
+    // offer__boxes.classList.add('active')
+    offer__boxes.forEach( box => {
+        box.classList.add('active')
+        box.style.pointerEvents = "none";
+    })
+    offer_boxes_body.forEach( box => {
+        box.style.display = 'block'
+    })
+}
