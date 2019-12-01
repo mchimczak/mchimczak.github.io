@@ -19,6 +19,18 @@ document.addEventListener('DOMContentLoaded', function() {
         duration: 500
     });
 
+
+    
+    var slider = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(slider, {
+        interval: 3000,
+        duration: 1000
+    });
+
+    
+    var modal = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(modal, {});
+
   });
 
 

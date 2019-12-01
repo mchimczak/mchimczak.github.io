@@ -3,8 +3,10 @@
     --main-txt-col: #333;
     --secondary-txt-col: #F5F5F5;
     --main-bg-col: #F9F9F9;
+    --main-darken-bg-col: #e6e6e65e;
     --secondary-bg-col: #184561;
     --main-el-bg-col: #70A8CC;
+    --main-el-border-col: #8bb9d5;
     --secondary-el-bg-col: #5d986a;
     /* --secondary-el-bg-col: #32BB8F; */
 }
@@ -83,7 +85,7 @@ nav {
     position: fixed;
 } */
 .brand-logo {
-    background-image: url('/img/logo.jpg');
+    background-image: url('/img/svg/logo.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -128,7 +130,7 @@ nav .nav-wrapper {
     text-align: center;
 }
 .sidenav__logo {
-background-image: url("/img/logo.jpg");
+background-image: url("/img/svg/logo.svg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: contain;
@@ -198,12 +200,13 @@ h4 span strong {
 }
 .map {
     width: 100%;
-    height: 85px;
+    height: 200px;
     margin: 1.68em auto;
     background-image: url('/img/mapa.PNG');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 10px;
 }
 .contact__content_wrapper {
     display: flex;
@@ -222,6 +225,15 @@ h4 span strong {
 }
 
 /* ABOUT SECTION */
+.about__section::after {
+    content: '';
+    display: block;
+    background-size: cover;
+    width: 100vw;
+    height: 95px;
+    /* background-image: url('/img/svg/about__btm.svg'); */
+    background-image: url('/img/svg/about_team_divider.svg');
+}
 .section__img {
     background-image: url('/img/doctors.png');
     background-position: center;
@@ -231,7 +243,7 @@ h4 span strong {
     height: 200px;
 }
 .about__bg {
-    background-color: #e6e6e6;
+    background-color: var(--main-darken-bg-col);
     padding: 66px 0;
     /* border-radius: 0 0 100px 0; */
 }
@@ -311,8 +323,50 @@ h4 span strong {
 }
 
 /* TEAM SECTION  */
+section.team__section {
+    margin-top: -33px;
+    background-image: linear-gradient(to top, #f9f9f9, #e7e8f1, #d1d7e9, #b8c8e1, #9cbad9, #87abcb, #719cbe, #5a8eb0, #4a7b9c, #396888, #295674, #184561);
+}
+.team__section h1 {
+    color: var(--secondary-txt-col);
+}
+.team__section_cards .card {
+    box-shadow: 0px 0px 0px 0 rgba(0,0,0,0.14), 0px 2px 3px 0px rgba(0,0,0,0.12), 0px 0px 0px 0px rgba(0,0,0,0.2);
+    border-radius: 25px;
+}
+.team__section_cards .card-image {
+    height: 300px;
+    padding: 20px;
+}
+.team__section .card .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 180px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 30px 30px 0 0;  
+}
+.team__section .card .card-content .card-title {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.team__section .btn {
+    background-color: #32bb8f;
+}
+
+
+
 .team__section_doctors {
     display: none;
+}
+/* .team__section_cards {
+    display: none;
+} */
+.team__section_cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
 }
 .tabs {
     background-color: var(--main-bg-col);
@@ -367,11 +421,10 @@ img.responsive-img.drimg {
 }
 .team__section .collapsible-header {
     color: var(--secondary-txt-col);
-    background-color: var(--secondary-el-bg-col);
-    border-bottom: 1px solid #53885f;
+    background-color: var(--main-el-bg-col);
+    border-bottom: 1px solid var(--main-el-border-col);
 }
 .team__section li.active .collapsible-header {
-    /* background-color: #349d7c; */
     box-shadow: 0px 0px 0px 0 rgba(0,0,0,0.14), 0px 3px 9px 0px rgba(0,0,0,0.12), 0px 2px 7px 0px rgba(0,0,0,0.2);
 }
 .collapsible-body__img {
@@ -388,7 +441,15 @@ img.responsive-img.drimg {
 
 
 /* OFFER SECTION  */
+.offer__section_slider {
+    display: block;
+}
+.slider .indicators .indicator-item.active {
+    background-color: var(--secondary-bg-col);
+}
+
 .collapsible.offer__wrapper {
+    display: none;
     box-shadow: none;
     margin-bottom: 66px;
 }
@@ -461,13 +522,13 @@ img.responsive-img.drimg {
 
 /* PATIENTS SECTION  */
 section.patients__section {
-    background-color: #e6e6e6;
+    background-color: var(--main-darken-bg-col);
     /* padding: 0 0 66px 0; */
     border-radius: 0 100px 0 0;
     position: relative;
 }
 .section__content, .patients__bg {
-    padding: 68px 0;
+    padding: 68px 0 0 0;
 }
 .patients__section .svg {
     background-image: url('/img/svg/patients__icon.svg');
@@ -492,14 +553,23 @@ section.patients__section {
 } */
 .patients__section .collapsible-header {
     color: var(--secondary-txt-col);
-    background-color: var(--secondary-el-bg-col);
-    border-bottom: 1px solid #336356;
+    background-color: var(--secondary-bg-col);
+    border-bottom: 1px solid var(--main-el-border-col);
 }
 .patients__section li.active .collapsible-header {
     box-shadow: 0px 0px 0px 0 rgba(0,0,0,0.14), 0px 2px 3px 0px rgba(0,0,0,0.12), 0px 2px 4px 0px rgba(0,0,0,0.2);
 }
 .patients__section .grid-wrapper {
     margin: 66px auto 0 auto;
+}
+.patients__section::after {
+    content: '';
+    display: block;
+    background-size: cover;
+    width: 100vw;
+    height: 140px;
+    background-image: url('/img/svg/about__btm.svg');
+    background-color: #f9f9f9;
 }
 
 
@@ -566,7 +636,7 @@ footer {
 
 @media (min-width: 768px) {
     *, *::before, *::after {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     h1 {
@@ -582,14 +652,25 @@ footer {
     h5 {
         font-size: 20px;
     }
+    section:not(:first-of-type) {
+        margin-bottom: 100px;
+    }
+    /* .offer__section, .faq__section, .patients__section {
+        margin-bottom: 100px;
+    } */
+
+    /* HERO SECTION  */
+    .hero__content p {
+        font-size: 20px;
+    }
 
     /* CONTACT SECTION  */
-    .map {
-        height: 200px;
-    }
     .contact__content_wrapper {
         flex-direction: row;
         justify-content: space-between;
+    }
+    .contact__info {
+        margin-right: 2em;
     }
     .about__box {
         margin: 1em 0;
@@ -616,25 +697,111 @@ footer {
         "main picture";
     }
 
+    section.contact__section {
+        margin-bottom: 0;
+    }
+
     /* ABOUT SECTION  */
     .section__img.container {
         width: 85%;
     }
+    .about__section::after {
+        content: '';
+        display: block;
+        background-size: cover;
+        width: 100vw;
+        height: 95px;
+        background-image: url('/img/svg/about_team_divider.svg');
+    }
+    /* .about__section::after {
+        content: '';
+        display: block;
+        background-size: cover;
+        width: 100vw;
+        height: 140px;
+        background-image: url('/img/svg/about__btm.svg');
+    } */
+
+    /* TEAM SECTION  */
+    section.team__section {
+        margin-top: -102px;
+    }
+    .team__section_cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+    }
+    .team__section .card .card-content {
+        justify-content: space-between;
+    }
+
+    .team__section_cards .card-image {
+        height: 250px;
+        padding: 20px;
+    }
+    /* .team__section .card .card-content {
+        background-color: #70a8cc29;
+        height: 100%;
+    } */
+    .team__section .card .card-content .card-title {
+        font-size: 18px;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    .team__section .btn {
+        background-color: #32bb8f;
+    }
+
+    .team__section .collapsible {
+        display: none;
+    }
+    /* .team__section::after {
+        content: '';
+        display: block;
+        background-size: cover;
+        width: 100vw;
+        height: 95px;
+        transform: rotate(180deg);
+        background-image: url('/img/svg/team__offer_divider.svg');
+    } */
 
     /* OFFER SECTION  */
 
+    .offer__section_slider {
+        display: block;
+    }
     .collapsible.offer__wrapper {
+        display: none;
         margin-bottom: 0;
     }
 
     .collapsible.offer__wrapper {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        gap: 1em;
     }
 
     .collapsible-header.offer__box {
-        height: 150px;
+        height: 200px;
     }
+
+    .slider .indicators .indicator-item.active {
+        background-color: var(--secondary-bg-col);
+    }
+
+
+    /* PATIENTS SECTION  */
+    /* .patients__bg {
+        padding-bottom: 0;
+    } */
+    /* .patients__section::after {
+        content: '';
+        display: block;
+        background-size: cover;
+        width: 100vw;
+        height: 140px;
+        background-image: url('/img/svg/about__btm.svg');
+        background-color: #f9f9f9;
+    } */
 
 
     /* FAQ SECTION  */
@@ -760,8 +927,9 @@ footer {
     /* PATIENTS SECTION  */
 
     .patients__section .collapsible-header {
-        background-color: #70a8cc;
-        border-bottom: 1px solid #62a0c6;
+        /* background-color: #70a8cc;
+        border-bottom: 1px solid #62a0c6; */
+        background-image: url('/img/svg/bg_pattern.svg');
     }
     
 }
