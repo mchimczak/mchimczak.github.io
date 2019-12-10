@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/svg/logo.svg" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Przychodnia Trzy Kotwice</title>
@@ -16,17 +17,17 @@
 <body>
     <!-- <div class="navbar-fixed"> -->
         <nav>
-            <div class="nav-wrapper  black-text lighten-2">
+            <div class="nav-wrapper">
                 <div class="brand-logo left"></div>
                 <span class="nav__title">Przychodnia Trzy Kotwice</span>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#start" class="sidenav-close">Strona główna</a></li>
-                    <li><a href="#nasza-misja" class="sidenav-close">Nasza misja</a></li>
-                    <li><a href="#zespół" class="sidenav-close">Zespół</a></li>
-                    <li><a href="#oferta" class="sidenav-close">Oferta</a></li>
-                    <li><a href="#dla-pacjentów" class="sidenav-close">Dla pacjentów</a></li>
-                    <li><a href="#faq" class="sidenav-close">FAQ</a></li>
+                    <li><a href="#start" class="sidenav-close nav__link">Strona główna</a></li>
+                    <li><a href="#nasza-misja" class="sidenav-close nav__link">Nasza misja</a></li>
+                    <li><a href="#zespół" class="sidenav-close nav__link">Zespół</a></li>
+                    <li><a href="#oferta" class="sidenav-close nav__link">Oferta</a></li>
+                    <li><a href="#dla-pacjentów" class="sidenav-close nav__link">Dla pacjentów</a></li>
+                    <li><a href="#faq" class="sidenav-close nav__link">FAQ</a></li>
                 </ul>
             </div>
           </nav>
@@ -51,7 +52,7 @@
                     <p>Od 20 lat świadczymy usługi zgodnie z naszym hasłem</p>
                     <p>Satysfakcja pacjenta- naszą satysfakcją!</p>
                   </div>
-                  <button class="hero__btn">Poznajmy się!</button>
+                  <button class="hero__btn btn"><a href="#nasza-misja">Poznajmy się!</a></button>
               </div>
           </section>
           <section class="contact__section" id="">
@@ -74,12 +75,12 @@
                       <div class="contact__info">
                           <div>
                               <h5>Kontakt</h5>
-                                  <p>telefon <a href="tel:+1-555-555-5555">77 444 21 35</a></p>
-                                  <p>email trzykotwice@gmail.com</p>
+                                  <p>Telefon <a href="tel:+48774444903">77 4444 903</a></p>
+                                  <p>Email poczta@przychodnia-trzykotwice.pl</p>
                           </div>
                           <div>
                               <h5>Lokalizacja</h5>
-                                  <p>ul. Trzech Kotwic 5</p>
+                                  <p>ul. Trzech Kotwic 6</p>
                                   <p>49-300 Brzeg</p>
                           </div>
                       </div>
@@ -202,157 +203,24 @@
                               <p>Here is some more information about this product that is only revealed once clicked on.</p>
                             </div>
                           </div>
+                          <button class="team__cta btn"><a href="#oferta">Sprawdź naszą ofertę</a></button>
                 </div>
-
-                <!-- <div class="row team__section_doctors">
-                        <div class="col s12">
-                            <ul class="tabs">
-                                <li class="tab col s12 m4 l6 xl2 tab__header_box">
-                                    <a href="#adam" class="teal-text text-darken-4 tab__header_content">Aleksander Szpak</a>
-                                </li>
-                                <li class="tab col s12 m4 l6 xl2 tab__header_box">
-                                    <a href="#bartek" class="teal-text text-darken-4 tab__header_content">Ewa Tuła-Granat</a>
-                                </li>
-                                <li class="tab col s12 m4 l6 xl2 tab__header_box">
-                                    <a href="#czarek" class="teal-text text-darken-4 tab__header_content">Piotr Bednarz</a>
-                                </li>
-                                <li class="tab col s12 m4 l6 xl2 tab__header_box">
-                                    <a href="#darek" class="teal-text text-darken-4 tab__header_content">Elżbieta Fijałkowska-Huczyńska</a>
-                                </li>
-                                <li class="tab col s12 m4 l6 xl2 tab__header_box">
-                                    <a href="#darek" class="teal-text text-darken-4 tab__header_content">Aldona Adamczyk-Krawiec</a>
-                                </li>
-                                <li class="tab col s12 m4 l6 xl2 tab__header_box">
-                                    <a href="#darek" class="teal-text text-darken-4 tab__header_content">Joanna Bogacka</a>
-                                </li>
-                            </ul>
-                            <div class="col s12 tab__content_box" id="adam">
-                                <div class="col s12 l6 tabs__content">
-                                    <p class="flow-text tabs__header">dr Adamski</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse accusamus cumque vitae vel
-                                        dolorum
-                                        eaque in, temporibus mollitia impedit nisi!</p>
-                                    <p>tel. 77 4444 070</p>
-                                </div>
-                                <div class="col s12 l6 offset-xl2">
-                                    <img src="img/doc1.png" alt="stars" class="responsive-img drimg">
-                                </div>
-                            </div>
-                            <div class="col s12 tab__content_box " id="bartek">
-                                <div class="col s12 l6 tabs__content">
-                                    <p class="flow-text tabs__header">lek.med. Elżbieta Fijałkowska - Huczyńska</p>
-                                    <p>lekarz pediatra</p>
-                                    <p>specjalista w dziedzinie osob mlodych i starych</p>
-                                </div>
-                                <div class="col s12 l6 offset-xl2 ">
-                                    <img src="img/doc1.png" alt="stars" class="responsive-img drimg">
-                                </div>
-                            </div>
-                            <div class="col s12 tab__content_box " id="czarek">
-                                <div class="col s12 l6 tabs__content">
-                                    <p class="flow-text tabs__header">dr Czarekiewicz</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse accusamus cumque vitae vel
-                                        dolorum
-                                        eaque in, temporibus mollitia impedit nisi!</p>
-                                </div>
-                                <div class="col s12 l6 offset-xl2 ">
-                                    <img src="img/doc3.png" alt="stars" class="responsive-img drimg">
-                                </div>
-                            </div>
-                            <div class="col s12 tab__content_box " id="darek">
-                                <div class="col s12 l6 tabs__content">
-                                    <p class="flow-text tabs__header">dr Darekowski</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse accusamus cumque vitae vel
-                                        dolorum
-                                        eaque in, temporibus mollitia impedit nisi!</p>
-                                </div>
-                                <div class="col s12 l6 offset-xl2 ">
-                                    <img src="img/doc4.png" alt="stars" class="responsive-img drimg">
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <ul class="collapsible container team__section_doctors_column">
-                            <li class="active">
-                                <div class="collapsible-header">lek. med Aleksander Szpak</div>
-                                <div class="collapsible-body">
-                                    <p>Kierownik placówki</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempora dolores, aut sapiente aliquid obcaecati.</p>
-                                    <p>tel 77 44444 070</p>
-                                    <div class="collapsible-body__img"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="collapsible-header">lek. med Ewa Tuła-Granat</div>
-                                <div class="collapsible-body">
-                                    <p>Kierownik placówki</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempora dolores, aut sapiente aliquid obcaecati.</p>
-                                    <p>tel 77 44444 070</p>
-                                    <div class="collapsible-body__img"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="collapsible-header">lek. med Piotr Bednarz</div>
-                                <div class="collapsible-body">
-                                    <p>Kierownik placówki</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempora dolores, aut sapiente aliquid obcaecati.</p>
-                                    <p>tel 77 44444 070</p>
-                                    <div class="collapsible-body__img"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="collapsible-header">lek. med Elżbieta Fijałkowska - Huczyńska</div>
-                                <div class="collapsible-body">
-                                    <p>Kierownik placówki</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempora dolores, aut sapiente aliquid obcaecati.</p>
-                                    <p>tel 77 44444 070</p>
-                                    <div class="collapsible-body__img"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="collapsible-header">lek. med Aldona Adamczyk-Krawiec</div>
-                                <div class="collapsible-body">
-                                    <p>Kierownik placówki</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempora dolores, aut sapiente aliquid obcaecati.</p>
-                                    <p>tel 77 44444 070</p>
-                                    <div class="collapsible-body__img"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="collapsible-header">lek. med Joanna Bogacka</div>
-                                <div class="collapsible-body">
-                                    <p>Kierownik placówki</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempora dolores, aut sapiente aliquid obcaecati.</p>
-                                    <p>tel 77 44444 070</p>
-                                    <div class="collapsible-body__img"></div>
-                                </div>
-                            </li>
-                    </ul> -->
           </section>
+
+          <section class="info__section">
+              <div class="section__img"></div>
+                  <div class="info__section_content container">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusamus aliquam provident quisquam nesciunt sapiente nihil reprehenderit excepturi temporibus, rem illo corrupti ratione quia dolore deleniti veritatis sunt pariatur laudantium eius illum neque. Incidunt eaque quod sint accusamus omnis cupiditate, ratione totam laborum ipsam reprehenderit illum similique suscipit consectetur dolorem!</p>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus eius aut itaque facere quaerat! Modi?</p>
+                  </div>
+          </section>
+
           <section class="offer__section">
-              <div class="container">
+              <div>
                 <div class="section__anchor" id="oferta"></div>
+                <div class="container">
                     <h1>oferta</h1>
-                    <!-- <div class="offer__wrapper">
-                        <div class="offer__box">
-                            <h5>Opieka w wieku rozwojowym</h5>
-                        </div>
-                        <div class="offer__box">
-                            <h5>Radiologia cyfrowa</h5>
-                        </div>
-                        <div class="offer__box">
-                            <h5>Diagnostyka</h5>
-                        </div>
-                        <div class="offer__box">
-                            <h5>Profesjonalna opieka pielęgniarska</h5>
-                        </div>
-                        <div class="offer__box">
-                            <h5>Szczepienia profilaktyczne</h5>
-                        </div>
-                        <div class="offer__box">
-                            <h5>Labolatorium</h5>
-                        </div>
-                    </div> -->
+                </div>
                     <ul class="collapsible offer__wrapper">
                     <li class="active">
                         <div class="collapsible-header offer__box"><h5>Opieka w wieku rozwojowym</h5></div>
@@ -547,47 +415,59 @@
               </div>
           </section>
       </main>
-      <footer>
-          <h5>nzoz "przychodnia trzy kotwice</h5>
-          <div class="footer__info">
-              <div>
-                  <p>NIP: 747 15 66 839</p>
-                  <p>REGON: 531405510</p>
+      <footer class="footer">
+          <h5>nzoz "przychodnia trzy kotwice"</h5>
+          <div class="footer__info container">
+              <div class="footer__block">
+                    <div class="footer__menu_wrapper">
+                        <ul>
+                            <li><a href="#start">Strona główna</a></li>
+                            <li><a href="#nasza-misja">Nasza misja</a></li>
+                            <li><a href="#zespół">Zespół</a></li>
+                            <li><a href="#oferta">Oferta</a></li>
+                            <li><a href="#dla-pacjentów">Dla pacjentów</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+              </div>
+              <div class="footer__block">
+                  <div class="footer__contact_wrapper">
+                      <p>ul.Trzech Kotwic 6</p>
+                      <p>49-300 Brzeg</p>
+                      <p>tel. 77 444 49 03</p>
+                      <p>e-mail trzykotwice@gmail.com</p>
+                      <!-- <div>
+                        <ul>
+                            <li><p>Poniedziałek 8.00-14.00</p></li>
+                            <li><p>Poniedziałek 8.00-14.00</p></li>
+                            <li><p>Poniedziałek 8.00-14.00</p></li>
+                            <li><p>Poniedziałek 8.00-14.00</p></li>
+                            <li><p>Poniedziałek 8.00-14.00</p></li>
+                            <li><p>Poniedziałek 8.00-14.00</p></li>
+                            <li><p>Poniedziałek 8.00-14.00</p></li>
+                        </ul>
+                      </div> -->
+                      <p>NIP: 747 15 66 839</p>
+                      <p>REGON: 531405510</p>
+                  </div>
+              </div>
+              <div class="footer__block">
+                  <div class="footer__icon_wrapper">
+                    <div class="footer__icon">
+                          <img src="/img/svg/pdf.svg" alt="pdf-icon" class="footer__pdf_icon">
+                          <a href="/assets/rodo.pdf" target="_blank">Rodo</a>
+                    </div>
+                    <div class="footer__icon">
+                          <img src="/img/svg/pdf.svg" alt="pdf-icon" class="footer__pdf_icon">
+                          <a href="/assets/rodo.pdf" target="_blank">Rodo</a>
+                    </div>
+                    <div class="footer__icon">
+                          <img src="/img/svg/pdf.svg" alt="pdf-icon" class="footer__pdf_icon">
+                          <a href="/assets/rodo.pdf" target="_blank">Rodo</a>
+                    </div>
+                  </div>
               </div>
           </div>
-          <!-- <div class="footer__contact">
-              <div class="footer__box">
-                  <p class="bold">Kierownik zakładu</p>
-                  <p>lek. med. Aleksander Szpak</p>
-                  <p>77 4444 707</p>
-              </div>
-              <div class="footer__box">
-                  <p class="bold">Zastępca Kierownika zakładu</p>
-                  <p>lek.med. Ewa Tuła - Granat</p>
-                  <p>77 4444 763</p>
-              </div>
-              <div class="footer__box">
-                  <p>lek.med. Piotr Bednarz</p>
-                  <p>77 4444 712</p>
-              </div>
-              <div class="footer__box">
-                  <p>lek.med. Elżbieta Fijałkowska - Huczyńska</p>
-                  <p>77 4444 765</p>
-              </div>
-              <div class="footer__box">
-                  <p>lek.med. Aldona Adamczyk-Krawiec</p>
-                  <p>77 4444 727</p>
-              </div>
-              <div class="footer__box">
-                  <p>lek.med. Joanna Bogacka</p>
-                  <p>77 4444 703</p>
-              </div>
-              <div class="footer__box">
-                  <p>Księgowość i  kadry</p>
-                  <p>77 444 2829</p>
-                  <p>e-mail: salaciak@poczta.onet.pl</p>
-              </div>
-          </div> -->
       </footer>
 
 

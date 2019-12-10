@@ -53,3 +53,59 @@ if (window.innerWidth >= 768 && window.innerWidth <=1200) {
         box.style.display = 'block'
     })
 }
+
+
+
+    const navbar = document.querySelector('nav');
+    const navlink = document.querySelectorAll('.nav__link');
+    const logo = document.querySelector('.brand-logo');
+    const contact__section = document.querySelector('.contact__section');
+    const cnct_sec_btm = contact__section.offsetTop + contact__section.offsetHeight;
+    let didScroll = false
+    let lastScrollTop = 0;
+    const minScrollPoint = 5;
+
+    window.addEventListener('scroll', () => {
+        didScroll = true;
+
+        if(window.scrollY > cnct_sec_btm) {
+            navbar.classList.add('nav--scrolled')
+            logo.classList.add('brand-logo--enlarge')
+            navlink.forEach(link => {
+                link.classList.add('nav__link--txt_darken')
+            })
+        } else {
+            navbar.classList.remove('nav--scrolled')
+            logo.classList.remove('brand-logo--enlarge')
+            navlink.forEach(link => {
+                link.classList.remove('nav__link--txt_darken')
+            })
+        }
+    })
+
+    const hasScrolled = () => {
+        const winScroll = window.scrollY
+
+        if(Math.abs(lastScrollTop - winScroll) <= minScrollPoint) {
+            return
+        }
+
+        if(winScroll > lastScrollTop && winScroll > navbar.offsetHeight) {
+            navbar.classList.add('nav-up')
+        } else {
+
+            // if(winScroll + window.innerHeight < document.documentElement.clientHeight) {
+                navbar.classList.remove('nav-up')
+            // }
+        }
+        lastScrollTop = winScroll
+    }
+
+    setInterval(() => {
+        if(window.innerWidth < 1200) {
+            if(didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }
+    }, 250);
