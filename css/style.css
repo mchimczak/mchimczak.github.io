@@ -219,7 +219,7 @@ nav .brand-logo.left {
     padding: 20px 0 0 0;
     position: relative;
     top: -100px;
-    overflow: hidden;
+    overflow-y: auto;
 }
 section.contact__section {
     margin-bottom: -100px;
@@ -267,7 +267,7 @@ h4 span strong {
     width: 120vw;
     height: 70px;
     position: relative;
-    bottom: -1px;
+    bottom: 0px;
     left: -20px;
     background-color: var(--main-bg-col);
     background-image: url('/img/svg/contact_divider.svg');
